@@ -1,4 +1,4 @@
-#A3-Cross-Site Scripting (XSS)
+# A3-Cross-Site Scripting (XSS)
 ### khái quát
 XSS được viết tắt bởi Cross-Site-Scripting. Nó là một phương pháp tấn công cơ bản. Nó dựa trên việc thực thi HTML và JavaScript trên một trang web. Việc tấn công này có thể xảy ra khi xác nhận những lệnh ở các text-box, hoặc cũng có thể là trên thanh URL. Những kết quả được đọc dưới dạng HTML, vì vậy nó sử dụng một vài thủ thuật Social-Engineering để tác động đến 1 ai đó tải một virus mà chính bạn đã tạo ra, và là tiềm năng cho một botnet, hoặc RAT, cũng có thể là 1 keylogger. XSS có thể trở nên rất nguy hiểm, Nhưng cũng có thể rất vô hại.
 ### gồm 3 loại
