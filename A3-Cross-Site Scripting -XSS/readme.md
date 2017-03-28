@@ -134,3 +134,8 @@ document.write(html);
 }
 ?>
 ``` 
+
+### lab 
+
+XSS - Reflected (GET),XSS - Reflected (POST)
+<img src="http://image.prntscr.com/image/c5611150478940c799cc3e47046a8965.png">
