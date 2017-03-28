@@ -137,5 +137,8 @@ document.write(html);
 
 ### lab 
 
-XSS - Reflected (GET),XSS - Reflected (POST)
+**XSS - Reflected (GET),XSS - Reflected (POST)**
 <img src="http://image.prntscr.com/image/c5611150478940c799cc3e47046a8965.png">
+
+**XSS - Reflected (JSON)** chú ý , câu lệnh mở đầu để đóng cho phù hợp, ;`prompt("hiện khung nhập")`
+<img src="http://image.prntscr.com/image/01053693841144838dff6e57136cd5be.png">
