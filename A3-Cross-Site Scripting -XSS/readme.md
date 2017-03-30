@@ -142,3 +142,7 @@ document.write(html);
 
 **XSS - Reflected (JSON)** chú ý , câu lệnh mở đầu để đóng cho phù hợp, ;`prompt("hiện khung nhập")`
 <img src="http://image.prntscr.com/image/01053693841144838dff6e57136cd5be.png">
+
+**XSS - Stored (User-Agent)**
+
+<img src="http://image.prntscr.com/image/d26603cff35b44dda6efe9c057ce7b68.png">
