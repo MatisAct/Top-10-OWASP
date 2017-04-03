@@ -8,7 +8,7 @@ XSS được viết tắt bởi Cross-Site-Scripting. Nó là một phương ph�
 
 - xss dom based : chưa nắm rõ
 
-các đoạn mã check lỗi
+các đoạn mã check lỗi:tham khảo tại [đây](https://www.youtube.com/watch?v=Iu3QtMy9cpg&index=2&list=PL1A2CSdiySGIRec2pvDMkYNi3iRO89Zot#t=1.464711)
 ```
 
 "><script>alert("XSS")</script>
