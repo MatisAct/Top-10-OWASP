@@ -1,6 +1,6 @@
 # A3-Cross-Site Scripting (XSS)
 
-- **  khái quát về xss](#1)**
+- **[khái quát về xss](#1)**
 - **[ các đoạn js truyền vào để check lỗi](#2)**
 - **[ thực hành trên lab](#3)**
 - **[ Cách tấn công và hạ gục 1 trang web bằng xss](#4)**
