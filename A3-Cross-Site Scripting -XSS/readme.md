@@ -1,5 +1,12 @@
 # A3-Cross-Site Scripting (XSS)
-### khái quát
+
+- **[ khái quát về xss](#1)
+- **[ các đoạn js truyền vào để check lỗi](#2)
+- **[ thực hành trên lab](#3)
+- **[ Cách tấn công và hạ gục 1 trang web bằng xss](#4)
+
+<a name="1"></a>
+## khái quát
 XSS được viết tắt bởi Cross-Site-Scripting. Nó là một phương pháp tấn công cơ bản. Nó dựa trên việc thực thi HTML và JavaScript trên một trang web. Việc tấn công này có thể xảy ra khi xác nhận những lệnh ở các text-box, hoặc cũng có thể là trên thanh URL. Những kết quả được đọc dưới dạng HTML, vì vậy nó sử dụng một vài thủ thuật Social-Engineering để tác động đến 1 ai đó tải một virus mà chính bạn đã tạo ra, và là tiềm năng cho một botnet, hoặc RAT, cũng có thể là 1 keylogger. XSS có thể trở nên rất nguy hiểm, Nhưng cũng có thể rất vô hại.
 ### gồm 3 loại
 - STORED-XSS :  chèn đoạn js thông qua lưu trữ , vd gửi tn đến admin
@@ -7,8 +14,9 @@ XSS được viết tắt bởi Cross-Site-Scripting. Nó là một phương ph�
 -  REFLECTED-XSS: Khác với Stored-XSS, Reflected-XSS đoạn mã khai thác sẽ không được lưu trữ trên server , chèn js vào mục tìm kiến hay cmt...
 
 - xss dom based : chưa nắm rõ
+<a name="2"></a>
 
-các đoạn mã check lỗi:tham khảo tại [đây](https://www.youtube.com/watch?v=Iu3QtMy9cpg&index=2&list=PL1A2CSdiySGIRec2pvDMkYNi3iRO89Zot#t=1.464711)
+## các đoạn mã check lỗi:tham khảo tại [đây](https://www.youtube.com/watch?v=Iu3QtMy9cpg&index=2&list=PL1A2CSdiySGIRec2pvDMkYNi3iRO89Zot#t=1.464711)
 ```
 
 "><script>alert("XSS")</script>
@@ -134,8 +142,8 @@ document.write(html);
 }
 ?>
 ``` 
-
-### lab 
+<a name="3"></a>
+## lab 
 
 **XSS - Reflected (GET),XSS - Reflected (POST)**
 <img src="http://image.prntscr.com/image/c5611150478940c799cc3e47046a8965.png">
@@ -146,3 +154,43 @@ document.write(html);
 **XSS - Stored (User-Agent)**
 
 <img src="http://image.prntscr.com/image/d26603cff35b44dda6efe9c057ce7b68.png">
+
+
+<a name="4"></a>
+
+## cách tấn công và hạ gục 1 trang web bằng xss!( thực ra chỉ check lỗi thôi :trollface: )
+
+**B1** check lỗi: thưởng thì mình hay nhập `<xss>` để kiểm tra :
+
+<img src="http://image.prntscr.com/image/16a6b9342eab4ea6a14ae64ea17578b7.png">
+
+trong trường hợp này từ khóa tìm kiếm được đưa vào tất cả , không bị lọc hay mã hóa gì cả ! mình khẳng định 99,69% bị dính xss! 
+
+**B2** nhập 1 đoạn script huyền cmn thoại! `<script>alert("xss")</script`
+
+<img src="http://image.prntscr.com/image/8940ce62ade34bc28dfc70c71588a9fa.png">
+
+  trời địu ! sao nó méo nhảy ra bảng thông báo xss, đờ mờ , té thôi ! đấy nếu là người khác thì người ta sẽ nghĩ thế , còn mình thì không . mình liền kiểm tra source của nó ,
+
+  <img src="http://image.prntscr.com/image/a73a3645d3c942be80138b9eb713054c.png">
+
+   ở đây trước đoạn js có 1 thẻ title á đìu , vậy chỉ cần đóng thẻ đó lại và truyền js vào thôi!
+
+  **B3** tuyệt chiêu kết thúc nó!
+  <img src="http://image.prntscr.com/image/050d3eb04a9b4ceb91bf0c45298cd763.png">
+
+  headshot! :v 
+
+  kiểm tra thử cookie nào 
+
+  <img src="http://image.prntscr.com/image/047f93d1296443ef8e35d898bdbb33d5.png">
+
+  **B4** bạn có thể làm gì khi thấy 1 site dính xss!( cái này theo ý nghĩ của mình)
+ 
+  - chiếm quyền đăng nhập , bằng cách chèn vào 1 đoạn script lấy cookie của người dùng, sau đó đăng nhập dưới danh nghĩa người dùng và làm chuyện ấy :trollface: ( chuyển tiền , mua hàng ...)
+
+  - hoặc đơn giản hơn , lấy cookie thằng admin , thằng này phải đem ra xử bắn đầu tiên khi site dính lỗi! sau khi lấy cookie và đăng nhập với tư cách admin , bạn có để deface web của nó , post clip 69, ảnh nude thằng ad( khuyến khích=)) ), 
+
+  - và đơn giản hơn , chèn 1 đoạn chuyển hướng về web của bạn , tăng lượt view, =))
+
+  ** đặc biệt , tất cả cách trên đều phải gửi đoạn js cho người dùng hoặc thằng ad, cách tấn công này gọi là `REFLECTED-XSS` **
