@@ -200,7 +200,7 @@ trong trường hợp này từ khóa tìm kiếm được đưa vào tất cả
 
   <img src="http://image.prntscr.com/image/a73a3645d3c942be80138b9eb713054c.png">
 
-   ở đây trước đoạn js có 1 thẻ title á đìu , vậy chỉ cần đóng thẻ đó lại và truyền js vào thôi!
+  Rõ ràng là đoạn js đã được truyền vào một cách hoàn chỉnh , vậy có gì uẩn khúc ở đây? à trước đoạn js có 1 thẻ title á đìu , vậy chỉ cần đóng thẻ đó lại và truyền js vào thôi!
 
   **B3** tuyệt chiêu kết thúc nó!
   <img src="http://image.prntscr.com/image/050d3eb04a9b4ceb91bf0c45298cd763.png">
