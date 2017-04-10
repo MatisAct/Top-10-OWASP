@@ -14,7 +14,7 @@ XSS được viết tắt bởi Cross-Site-Scripting. Nó là một phương ph�
 
 -  REFLECTED-XSS: Khác với Stored-XSS, Reflected-XSS đoạn mã khai thác sẽ không được lưu trữ trên server , chèn js vào mục tìm kiến hay cmt...
 
-- xss dom based : chưa nắm rõ
+- xss dom based : chèn thêm 1 đoạn js vào web , như form đăng kí , đăng nhập...
 <a name="2"></a>
 
 ## các đoạn mã check lỗi:tham khảo tại [đây](https://www.youtube.com/watch?v=Iu3QtMy9cpg&index=2&list=PL1A2CSdiySGIRec2pvDMkYNi3iRO89Zot#t=1.464711)
