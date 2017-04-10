@@ -220,3 +220,5 @@ trong trường hợp này từ khóa tìm kiếm được đưa vào tất cả
   - và đơn giản hơn , chèn 1 đoạn chuyển hướng về web của bạn , tăng lượt view, =))
 
   ** đặc biệt , tất cả cách trên đều phải gửi đoạn js cho người dùng hoặc thằng ad, cách tấn công này gọi là `REFLECTED-XSS` **
+  
+  tham khảo http://cunghocweb123.blogspot.com/2013/07/tan-cong-xss-va-cach-phong-chong-bao-mat.html
