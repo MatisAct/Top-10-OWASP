@@ -53,3 +53,6 @@ Cả hai cách trên vẫn có thể bị vượt qua nếu kẻ tấn công có
 - **Sử dụng token**
 
 Tạo ra một token tương ứng với mỗi form, token này sẽ là duy nhất đối với mỗi form và thường thì hàm tạo ra token này sẽ nhận đối số là”SESSION” hoặc được lưu thông tin trong SESSION. Khi nhận lệnh HTTP POST về, hệ thống sẽ thực hiên so khớp giá trị token này để quyết định có thực hiện hay không.
+
+
+### LAB : coppy đoạn forrm đổi pass , rồi gán giá trị value để thay đổi , lưu dưới trang khác ( lap đang hỏng nên chưa up được T.T)
