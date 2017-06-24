@@ -1,6 +1,7 @@
 ## check database khi biết cột lỗi;
 - thay cột lỗi bằng database
-|Variable/Function|ahihi|Output|
+
+|Variable.Function|ahihi|Output|
 |----------|-------------|--------------|
 |@@hostname	|:|	Current Hostname|
 |@@tmpdir|	:	|Tept Directory|
