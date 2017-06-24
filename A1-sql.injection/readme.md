@@ -1,7 +1,7 @@
 ## check database khi biết cột lỗi;
 - thay cột lỗi bằng database
 |Variable/Function|		|Output|
-|-----------------|---|------|
+|-----------------|------------|------------|
 |@@hostname	|:|	Current Hostname|
 |@@tmpdir|	:	|Tept Directory|
 |@@datadir|	:	|Data Directory|
