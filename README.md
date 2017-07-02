@@ -13,3 +13,5 @@
 
 
 <img src="http://image.prntscr.com/image/cbd0b2369b17402289aee3929a21cb95.png">
+
+buil sql http://webcache.googleusercontent.com/search?q=cache:-Mp7xhnGzHcJ:www.wikihow.com/Prevent-SQL-Injection-in-PHP+&cd=2&hl=vi&ct=clnk&gl=vn
